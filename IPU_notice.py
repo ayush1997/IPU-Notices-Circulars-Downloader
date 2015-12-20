@@ -60,6 +60,11 @@ def text(ur11_list,url2_list,course):
 				c = c+1
 			else:
 				c= c+1
+	if len(main_dic) == 0:
+		return False
+	else:
+		return True
+		
 
 
 	
@@ -87,23 +92,26 @@ while 1:
 	try:
 		print "Enter course"
 		course = raw_input()
-		text(url1_list,url2_list,course)
-		print "do you wanr to download any,   y/n"
-		act = raw_input()
-		if act == "y":
-			print "enter the serial no of the notice you want to download"
-			ser_no = raw_input()
-			print "enter by what name do you want to save it as,eg, abc.pdf"
-			name_file = raw_input()
-			download(main_dic[int(ser_no)],name_file)
-			break
+		a = text(url1_list,url2_list,course)
+		if a == False:
+			print "No notice for this course or you have enter wrong course name"
 		else:
-			break
+			print "Do you want to download any,   y/n"
+			act = raw_input()
+			if act == "y":
+				print "Enter the serial no of the notice you want to download"
+				ser_no = raw_input()
+				print "Enter by what name do you want to save it as,eg, abc.pdf"
+				name_file = raw_input()
+				download(main_dic[int(ser_no)],name_file)
+				break
+			else:
+				break
 
 		
 		
 	except:
-		print "wrong input"
+		print "WRONG INPUT"
 
 
 
