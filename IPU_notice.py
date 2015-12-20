@@ -24,7 +24,9 @@ def text(ur11_list,url2_list,course):
 		if course in txt:
 
 			date = i.find_next_sibling("td").find_next_sibling("td").find_next_sibling("td").get_text()
-			print c,"-------","date","------------",date,"--------",txt
+			print c,"-------","Date","----",date
+			print txt
+			print 
 
 
 			if i.find_next_sibling("td").find_next_sibling("td").find("a") != None:
@@ -43,7 +45,9 @@ def text(ur11_list,url2_list,course):
 		if course in txt:
 
 			date = i.find_next_sibling("td").find_next_sibling("td").find_next_sibling("td").get_text()
-			print c,"-------","Date","----------",date,"--------",txt
+			print c,"-------","Date","----",date
+			print txt
+			print 
 
 
 			if i.find_next_sibling("td").find_next_sibling("td").find("a") != None:
