@@ -90,11 +90,11 @@ url2_list = soup2.find_all("td",text=u"Ο")
 
 while 1:
 	try:
-		print "Enter course"
+		print "Enter course,  eg:- B.Tech,M.Tech,MBA ...."
 		course = raw_input()
 		a = text(url1_list,url2_list,course)
 		if a == False:
-			print "No notice for this course or you have enter wrong course name"
+			print "No notice for this course or you have enter wrong course name "
 		else:
 			print "Do you want to download any,   y/n"
 			act = raw_input()
